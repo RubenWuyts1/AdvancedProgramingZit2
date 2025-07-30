@@ -1,0 +1,3 @@
+/home/ruben/CLionProjects/AdvacedProgramingZit2/cmake-build-debug/CMakeFiles/AdvacedProgramingZit2.dir
+/home/ruben/CLionProjects/AdvacedProgramingZit2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ruben/CLionProjects/AdvacedProgramingZit2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
