@@ -4,58 +4,59 @@
 
 #include "Game.h"
 
+// Constructor: Initializes the game window and all core components
+Controller::Game::Game()
+    : window(sf::VideoMode(500, 700), "Doodle Jump"), score(std::make_shared<Score>()),
+      camera(std::make_shared<Camera>()), world(std::make_shared<World>(std::make_unique<Tile::Factory::DefaultBGTileFactory>())),
+      view(std::make_shared<GameView>(window)) {
 
-Game::Game() : window(sf::VideoMode(500, 700), "Doodle Jump") {
+    window.setFramerateLimit(60);  // Cap framerate to 60 FPS
+    setupObservers();              // Link model to view components
+    world->initializeWorld(world); // Generate initial world state
+}
 
-    // Zet framerate cap (optioneel)
-    window.setFramerateLimit(60);
-    // Maak modellen aan
-    score = std::make_shared<Score>();
-    camera = std::make_shared<Camera>();
-
-    // Geef camera en score als observer-onderdelen door aan factory
-    auto factory = std::make_unique<DefaultBGTileFactory>();  // Of: je maakt deze ook observer-aware
-
-    // Maak wereld aan met factory
-    world = std::make_shared<World>(std::move(factory));
-
-    // Koppel World → Score en Camera als observers
+// Connects model observers (camera, score) to view
+void Controller::Game::setupObservers() noexcept {
     world->addObserver(score);
     world->addObserver(camera);
-    // Maak GameView aan met toegang tot alles wat hij moet weergeven
-    view = std::make_shared<GameView>(window);
-
-    // Koppel Camera en Score → GameView als observer
     camera->addObserver(view);
     score->addObserver(view);
-
-    world->initializeWorld(world);
 }
 
-void Game::run() {
-    Direction direction = Direction::None;
+// Main game loop: handles input, updates game state, and renders frame
+void Controller::Game::run() {
     while (window.isOpen()) {
-        sf::Event event{};
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-        double deltaTime = Stopwatch::getInstance()->tick();
-        direction = Direction::None;
-        if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
-            direction = Direction::Left;
-        } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-            direction = Direction::Right;
-        }
-        world->update(deltaTime, direction);
-        window.clear();
-        view->draw(); // View tekent op basis van model
-        window.display();
+        handleEvents(); // Process keyboard and window input
+        update();       // Advance game state
+        render();       // Draw current state to screen
     }
 }
 
-Game::~Game() {
-    if (window.isOpen()) {
-        window.close();
+// Handles window events and keyboard input
+void Controller::Game::handleEvents() {
+    sf::Event event{};
+    while (window.pollEvent(event)) {
+        if (event.type == sf::Event::Closed)
+            window.close(); // Close the window when requested
     }
+
+    direction = Direction::None; // Default input direction
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Q)) {
+        direction = Direction::Left;
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+        direction = Direction::Right;
+    }
+}
+
+// Updates the world state based on delta time and player input
+void Controller::Game::update() {
+    double deltaTime = util::Stopwatch::getInstance()->tick(); // Time since last frame
+    world->update(deltaTime, direction);                 // Forward input and time to world
+}
+
+// Clears the window and draws the current view
+void Controller::Game::render() {
+    window.clear();   // Prepare frame
+    view->draw();     // Draw all visual elements
+    window.display(); // Present frame
 }

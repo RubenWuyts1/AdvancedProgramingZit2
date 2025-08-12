@@ -6,11 +6,16 @@ set(CMAKE_CXX_STANDARD 20)
 find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
 
 add_executable(AdvacedProgramingZit2 main.cpp
-        BGTile.cpp
+        BGTile.h
         Game.cpp
         World.cpp
         GameView.cpp
         Observers.cpp
-        Singletons.cpp)
+        Random.cpp
+        Stopwatch.cpp
+        NormalTiles.cpp
+        BonusTiles.cpp
+        BGTileFactory.cpp
+        Player.cpp)
 
 target_link_libraries(AdvacedProgramingZit2 sfml-system sfml-window sfml-graphics)

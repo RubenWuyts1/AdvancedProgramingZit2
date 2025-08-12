@@ -55,12 +55,6 @@ build CMakeFiles/AdvacedProgramingZit2.dir/main.cpp.o: CXX_COMPILER__AdvacedProg
   OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
   OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
 
-build CMakeFiles/AdvacedProgramingZit2.dir/BGTile.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/BGTile.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
-  DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/BGTile.cpp.o.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
-  OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
-
 build CMakeFiles/AdvacedProgramingZit2.dir/Game.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/Game.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
   DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/Game.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
@@ -85,8 +79,38 @@ build CMakeFiles/AdvacedProgramingZit2.dir/Observers.cpp.o: CXX_COMPILER__Advace
   OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
   OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
 
-build CMakeFiles/AdvacedProgramingZit2.dir/Singletons.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/Singletons.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
-  DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/Singletons.cpp.o.d
+build CMakeFiles/AdvacedProgramingZit2.dir/Random.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/Random.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
+  DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/Random.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+  OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+
+build CMakeFiles/AdvacedProgramingZit2.dir/Stopwatch.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/Stopwatch.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
+  DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/Stopwatch.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+  OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+
+build CMakeFiles/AdvacedProgramingZit2.dir/NormalTiles.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/NormalTiles.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
+  DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/NormalTiles.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+  OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+
+build CMakeFiles/AdvacedProgramingZit2.dir/BonusTiles.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/BonusTiles.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
+  DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/BonusTiles.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+  OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+
+build CMakeFiles/AdvacedProgramingZit2.dir/BGTileFactory.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/BGTileFactory.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
+  DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/BGTileFactory.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+  OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
+
+build CMakeFiles/AdvacedProgramingZit2.dir/Player.cpp.o: CXX_COMPILER__AdvacedProgramingZit2_unscanned_Debug /home/ruben/CLionProjects/AdvacedProgramingZit2/Player.cpp || cmake_object_order_depends_target_AdvacedProgramingZit2
+  DEP_FILE = CMakeFiles/AdvacedProgramingZit2.dir/Player.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
   OBJECT_FILE_DIR = CMakeFiles/AdvacedProgramingZit2.dir
@@ -99,7 +123,7 @@ build CMakeFiles/AdvacedProgramingZit2.dir/Singletons.cpp.o: CXX_COMPILER__Advac
 #############################################
 # Link the executable AdvacedProgramingZit2
 
-build AdvacedProgramingZit2: CXX_EXECUTABLE_LINKER__AdvacedProgramingZit2_Debug CMakeFiles/AdvacedProgramingZit2.dir/main.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/BGTile.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/Game.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/World.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/GameView.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/Observers.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/Singletons.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+build AdvacedProgramingZit2: CXX_EXECUTABLE_LINKER__AdvacedProgramingZit2_Debug CMakeFiles/AdvacedProgramingZit2.dir/main.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/Game.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/World.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/GameView.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/Observers.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/Random.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/Stopwatch.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/NormalTiles.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/BonusTiles.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/BGTileFactory.cpp.o CMakeFiles/AdvacedProgramingZit2.dir/Player.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
   OBJECT_DIR = CMakeFiles/AdvacedProgramingZit2.dir
